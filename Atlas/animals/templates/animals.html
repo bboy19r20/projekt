@@ -2,6 +2,7 @@
 
 {% block content %}
 {% for animal in queryset %}
+<p class="center">
 <div class="media" >
   <img src={{ animal.image_url }} class="align-self-start mr-3" alt="..." width="300" height="300">
 <div class="card"  style="width: 30rem;">
@@ -25,6 +26,8 @@
     <ul class="list-group list-group-horizontal">
   <li class="list-group-item" style="width: 18rem;">Klimat</li>
   <li class="list-group-item" style="width: 18rem;">{{ animal.climate }}</li>
+</div>
+</p>
 </ul>
 </div></div>
 

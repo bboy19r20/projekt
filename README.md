@@ -1,3 +1,2 @@
 # projekttibd
  siema byku
-kutas

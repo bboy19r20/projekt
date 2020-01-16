@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<form method="POST" class="form=group", action='/add_animal_form_submission/'>
+            {% csrf_token %}
+        {{form|crispy}}
+  {{ formaddanimal.as_p }}
+    <button type="submit" class="btn btn-success">Dodaj</button>
+</form>
+{% endblock %}

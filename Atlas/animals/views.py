@@ -17,12 +17,12 @@ def add_animal_form_submission(request):
     form_data=forms.AddAnimal(request.POST)
     if form_data.is_valid():
         Animal=models.Animal()
-        Animal.name = form_data.cleaned_data['name']
-        Animal.eat = form_data.cleaned_data['eat']
-        Animal.environment = form_data.cleaned_data['environment']
-        Animal.type = form_data.cleaned_data['type']
-        Animal.climate = form_data.cleaned_data['climate']
-        Animal.image_url = form_data.cleaned_data['image_url']
+        Animal.name = form_data.cleaned_data['Nazwa']
+        Animal.eat = form_data.cleaned_data['Jedzenie']
+        Animal.environment = form_data.cleaned_data['Środowisko']
+        Animal.type = form_data.cleaned_data['Typ']
+        Animal.climate = form_data.cleaned_data['Klimat']
+        Animal.image_url = form_data.cleaned_data['Obraz_URL']
         Animal.save()
     context = {
         'formaddanimal':form_data

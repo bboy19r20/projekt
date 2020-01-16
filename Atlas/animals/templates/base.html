@@ -44,30 +44,20 @@
         <a class="nav-link" href="/login">Login</a>
       </li>
         {% endif %}
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
-        </div>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="/animals">Zwierzęta<span class="sr-only">(current)</span></a>
       </li>
         {% if user.is_authenticated %}
       <li class="nav-item">
-        <a class="nav-link" href="/addanimal">Dodaj zwierze</a>
+        <a class="nav-link" href="/add_animal_form_submission">Dodaj zwierze</a>
       </li>
         {% else %}
         {% endif %}
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Szukaj" aria-label="Search", name="name_contains" , value='{{request.GET.q}}'>
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Szukaj</button>
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" formaction="/animals" >Szukaj</button>
     </form>
   </div>
 </nav>
